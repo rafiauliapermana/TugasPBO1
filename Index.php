@@ -1,35 +1,40 @@
-<?php 
-    require_once 'Soal No 2.php';
+<?php
+    require_once 'No 3.php';
 ?>
 
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="No 2.css">
-    <title> Tugas Praktikum 4</title>
+    <link rel="stylesheet" type="text/css" href="Tabel.css">
+    <title>Tugas Praktikum 4</title>
 </head>
 <body>
-<div class="container">
-<h2>Soal NO 2</h2>
-<div class="form">
-    <form action="" method="post">
-            <input type="number" name="input1">
-            <input type="number" name="input2">
-            <input type="number" name="input3">
-            <button type="submit" name="submit">Submit</button>
-          </form>
-        </div>
+<h2>Soal NO 3</h2>
+<table align="center">
 
-          <?php 
-              if (isset($_POST['submit'])) {
-                if (!$_POST['input3']) {
-                  $value1 = new RerataNilai2($_POST['input1'], $_POST['input2']);
-                  echo $value1->average(0);
-                } else {
-                  $value1 = new RerataNilai2($_POST['input1'], $_POST['input2']);
-                  echo $value1->average($_POST['input3']);
-                }
-              }
-            ?>
-</div>
+<tr align="cemtar" bgcolor="blue">
+    <td>Objek</td>
+    <td>Umur</td>  
+    <td>Nama</td>  
+    <td>Panjang Ekor</td>  
+    <td>Cara Bergerak</td>      
+</tr>
+
+<tr>
+    <td>01</td>
+    <td><?=$katak->getUmur() ?> </td>  
+    <td><?=$katak->getnama() ?> </td>  
+    <td>-</td>  
+    <td><?=$katak->carabergerak() ?> </td>      
+</tr>
+
+<tr>
+    <td>02</td>
+    <td><?=$kecebong->getUmur() ?></td>  
+    <td><?=$kecebong->getNama() ?></td>  
+    <td><?=$kecebong->getpanjangekor() ?></td>  
+    <td><?=$kecebong->carabergerak() ?></td>      
+</tr>
+
+</table>
 </body>
 </html>
